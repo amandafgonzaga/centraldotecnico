@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central do Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navegacao-principal">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Dicas CT</a></li>
+            <li><button class="botao-contato">Fale conosco</button></li>
+        </ul>
+    </nav>
+
+    <div class="conteudo"> <!-- Div para o conteúdo -->
+        <header class="cabecalho-site">
+            <h1>Bem-vindo à Central do Técnico!</h1>
+            <p>A escola mais bem avaliada no Google na área de manutenção de dispositivos eletrônicos.</p>
+            <button class="botao-cta">Saiba mais!</button>
+        </header>
+
+        <div class="imagem-direita"></div> <!-- Div para a imagem à direita -->
+    </div>
+
+    <section class="secao-cursos">
+        <h2>EXPLORE NOSSOS CURSOS E COMECE SUA CARREIRA DE SUCESSO!</h2>
+        <p class="paragrafo-pratica">Aqui, a prática é 100%</p>
+
+        <div class="item-curso">
+            <h3 onclick="toggleCourse(this)">Manutenção de Celular e Tablet <img src="images/sinal-de-seta-para-baixo-para-navegar.png" alt="Expandir" class="seta"></h3>
+            <div class="course-details" style="display: none;">
+                <p>Aprenda tudo o que você precisa para se tornar um especialista em manutenção de celulares e tablets. Desde a gestão de assistência até as técnicas básicas de solda, nosso curso cobre todos os aspectos necessários para você se destacar no mercado.</p>
+            </div>
+        </div>
+        
+        <div class="item-curso">
+            <h3 onclick="toggleCourse(this)">Montagem e Manutenção de PC <img src="images/sinal-de-seta-para-baixo-para-navegar.png" alt="Expandir" class="seta"></h3>
+            <div class="course-details" style="display: none;">
+                <p>Domine as habilidades para montar e reparar computadores, desde PCs comuns até os mais avançados PCs Gamer. Nosso curso prático ensina você a realizar diagnósticos, manutenções preventivas, e configurações que garantem o melhor desempenho.</p>
+            </div>
+        </div>
+        
+        <div class="item-curso">
+            <h3 onclick="toggleCourse(this)">Manutenção de Notebooks <img src="images/sinal-de-seta-para-baixo-para-navegar.png" alt="Expandir" class="seta"></h3>
+            <div class="course-details" style="display: none;">
+                <p>Especialize-se na manutenção de notebooks com um curso prático e completo. Aprenda desde as noções básicas de segurança até técnicas avançadas de reparo, sempre com apoio total do nosso time de instrutores.</p>
+            </div>
+        </div>        
+    </section>
+
+    <section class="secao-destaques">
+        <p>Traga aparelhos de clientes e realize os consertos durante o curso, ganhando experiência e dinheiro ao mesmo tempo.</p>
+    </section>
+    
+    <section class="secao-galeria">
+        <div class="grid-galeria">
+            <div class="item-galeria">
+                <img src="images/IMG_7546.jpg" alt="Foto 1">
+            </div>
+            <div class="item-galeria">
+                <img src="images/IMG_8551.jpg" alt="Foto 2">
+            </div>
+            <div class="item-galeria">
+                <img src="images/IMG_7558.jpg" alt="Foto 3">
+            </div>
+            <div class="item-galeria">
+                <img src="images/IMG_8548.jpg" alt="Foto 4">
+            </div>
+            <div class="item-galeria">
+                <img src="images/IMG_8550.jpg" alt="Foto 5">
+            </div>
+        </div>
+    </section>    
+
+    <section class="secao-depoimentos">
+        <h2 class="titulo-depoimentos">O que falam da Central do Técnico</h2>
+        <div class="depoimentos-container">
+            <div class="depoimentos-wrapper">
+                <blockquote class="depoimento active">
+                    <p>"Fiz um curso técnico de reparo de celulares que foi uma experiência muito enriquecedora. Os instrutores eram altamente qualificados, tornando o aprendizado acessível e prático. Aprendi a lidar com uma variedade de problemas, desde simples trocas de tela até reparos em placas. O curso oferecia um ambiente acolhedor e colaborativo, onde os colegas compartilhavam dicas e experiências, o que tornou o aprendizado ainda mais eficaz. Ao concluir, me senti confiante nas minhas habilidades e pronto para iniciar uma carreira na área."</p>
+                    <footer>— Kaio</footer>
+                </blockquote>
+                <blockquote class="depoimento">
+                    <p>"Ótima experiência, professor atencioso e prestativo com todos os alunos, abstraí 100 por cento de todas as aulas."</p>
+                    <footer>— Wagner</footer>
+                </blockquote>
+                <blockquote class="depoimento">
+                    <p>"Curso muito prático, deu para entender tudo e o suporte que oferece esclarece qualquer dúvida."</p>
+                    <footer>— Maiki</footer>
+                </blockquote>
+                <blockquote class="depoimento">
+                    <p>"O curso é muito bom, muito didático, bem elaborado e prático. Não tenho do que reclamar, só agradecer."</p>
+                    <footer>— Alex</footer>
+                </blockquote>
+                <blockquote class="depoimento">
+                    <p>"Curso incrível!! Equipe nota mil. Professor sensacional. Só a agradecer ao Central do Técnico."</p>
+                    <footer>— Felipe</footer>
+                </blockquote>
+                <blockquote class="depoimento">
+                    <p>"Muito satisfeito com o atendimento e o conteúdo do curso, professor muito experiente e bem atencioso, recomendo a todos."</p>
+                    <footer>— Tobias</footer>
+                </blockquote>
+            </div>
+        </section>
+    </section>
+    
+    <section class="secao-duvidas">
+        <h2>Ficou com alguma dúvida?</h2>
+        <form action="#" method="POST">
+            <label for="name">Nome completo *</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Assunto *</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="whatsapp">WhatsApp *</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required>
+            
+            <button type="submit">Falar com um consultor</button>
+        </form>
+    </section>
+    
+    <section class="secao-informacoes-contato">
+        <div class="informacoes-contato">
+            <h3>Contato</h3>
+            <div class="contato-container">
+                <div class="mapa">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.2356149003733!2d-46.57391978495967!3d-23.558162284681964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ed48972a259%3A0x82d7d0a5ee7b8907!2sRua%20Tuiuti%2C%202358%20Sala%202%20Tatuap%C3%A9%20%7C%20SP%20CEP%2003307-005!5e0!3m2!1spt-BR!2sbr!4v1616600505561!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
+                </div>
+                <div class="contato-info">
+                    <p><strong>Suporte:</strong> (11) 92092-4554</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:mktcentraldotec@gmail.com">mktcentraldotec@gmail.com</a></p>
+                    <p><strong>Endereço:</strong> Rua Tuiuti, 2358 Sala 2 Tatuapé | SP CEP 03307-005</p>
+                </div>
+            </div>
+    
+            <div class="redes-sociais">
+                <h3>Siga a Central do Técnico nas redes sociais</h3>
+                <div class="icones-sociais">
+                    <a href="https://www.facebook.com/centraldotec/" target="_blank">
+                        <img src="images/icons8-facebook-48.png" alt="Facebook" class="social-icon" />
+                    </a>
+                    <a href="https://instagram.com/centraldotec" target="_blank">
+                        <img src="images/icons8-instagram-48.png" alt="Instagram" class="social-icon" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/central-do-tecnico" target="_blank">
+                        <img src="images/icons8-linkedin-48.png" alt="Linkedin" class="social-icon" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC7xU4eznPipzL1YqxFV9EOA" target="_blank">
+                        <img src="images/icons8-youtube-48.png" alt="YouTube" class="social-icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="rodape-site">
+        <p>© 2024 Central do Técnico. Todos os direitos reservados.</p>
+    </footer>
+    
+    <a href="https://wa.me/5511920924554" class="whatsapp-icon" target="_blank">
+        <img src="images/whatsapp.png" alt="WhatsApp" />
+    </a>
+    
+    
+    <script src="script.js"></script> <!-- Inclui o arquivo JavaScript -->
+<!-- Code injected by live-server -->
+</body>
+</html>
