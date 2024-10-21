@@ -1,0 +1,27 @@
+# Ignorar arquivos de configuração do editor
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar pastas de dependências
+node_modules/
+bower_components/
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de compilação
+dist/
+build/
+
+# Ignorar arquivos temporários
+tmp/
+temp/
+*.tmp
+
+# Ignorar arquivos de ambiente
+.env
