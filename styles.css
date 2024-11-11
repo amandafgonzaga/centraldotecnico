@@ -1,0 +1,712 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+} /* Para garantir que padding e border não afetem a largura total dos elementos */
+
+html, body {
+    height: 100%; /* Define a altura total do HTML e do corpo */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0;
+    background-color: #000000; /* Cor de fundo preta */
+}
+
+/* Estilização da navegação principal */
+.navegacao-principal {
+    margin: 0;
+    height: 60px; /* Defina uma altura fixa para a barra de navegação */
+    padding: 2px 10px; /* Diminuir o espaçamento interno lateral */
+    background-color: #474747; /* Cor de fundo */
+    position: fixed; /* Fixa a barra no topo */
+    width: 100%; /* Largura total */
+    z-index: 10; /* Garante que a barra fique acima de outros elementos */
+    display: flex; /* Flexbox para alinhar itens */
+    align-items: center; /* Centraliza verticalmente todos os itens na barra */
+    justify-content: space-between; /* Espaço entre o logo e a lista */
+    flex-direction: row; /* Garante que os itens estejam lado a lado */
+}
+
+.navegacao-principal .logo {
+    height: 150px; /* Mantenha a altura da logo */
+    width: auto; /* Mantém a proporção */
+    margin-left: 20px; /* Espaço entre o logo e a lista */
+    margin-top: 10px; /* Espaço entre o logo e a magin superior */
+}
+
+.navegacao-principal .botao-contato {
+    padding: 10px 15px; /* Consistente com o padding dos links */
+    background-color: #bbed2f; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    margin-left: auto; /* Espaço à direita do botão */
+    margin-bottom: 15px;
+    
+}
+
+.navegacao-principal ul {
+    list-style: none; /* Remove as marcas da lista */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove espaçamentos internos */
+    display: flex; /* Exibe itens em linha */
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.navegacao-principal li {
+    margin: 0 15px; /* Aumenta a margem entre os itens */
+}
+
+/* Estilo específico para o botão */
+.navegacao-principal .botao-contato:hover {
+    background-color: #fff; /* Cor do fundo do botão ao passar o mouse */
+    color: #000000; /* Cor do texto do botão ao passar o mouse */
+}
+
+.navegacao-principal a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+.navegacao-principal a:hover {
+    color: #FFD700; /* Cor do texto ao passar o mouse */
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: #fa9303; /* Cor do texto */
+    line-height: 1.6; /* Linha de altura */
+}
+
+/* Div para o conteúdo principal */
+.conteudo {
+    display: flex; /* Usando flexbox para alinhar o conteúdo */
+    align-items: flex-start; /* Alinha o conteúdo no topo */
+    padding: 50px 20px; /* Espaçamento interno */
+    position: relative; /* Necessário para a posição absoluta da imagem */
+}
+
+.cabecalho-site {
+    max-width: 60%; /* Limita a largura do texto para melhor alinhamento */
+    padding: 20px; /* Espaçamento interno */
+    z-index: 2; /* Garante que o texto fique acima da imagem */
+}
+
+.imagem-direita {
+    background-image: url('images/AULAO_SOCIOS.jpg'); /* Caminho da nova imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a div */
+    background-position: center; /* Centraliza a imagem */
+    width: 40%; /* Largura da div com a imagem */
+    height: 450px; /* Altura ajustada da div com a imagem */
+    border-radius: 20px; /* Bordas arredondadas para a imagem */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Sombra ao redor da imagem */
+    position: absolute; /* Fixar a imagem à direita */
+    top: 100px; /* Alinha a imagem ao topo do conteúdo */
+    right: 30px; /* Alinha a imagem à direita do conteúdo */
+}
+
+
+
+.cabecalho-site h1 {
+    font-size: 3em; /* Aumenta o tamanho da fonte do título */
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+.cabecalho-site .texto-branco {
+    color: white; /* Cor para "Bem-vindo à" */
+}
+.cabecalho-site .texto-laranja {
+    color: #fa9303; /* Cor para "Central do Técnico!" */
+}
+
+.cabecalho-site p {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do parágrafo */
+    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+    margin-right: 120px;
+    text-align: justify; /* Justifica o texto */
+    color: #fff;
+}
+
+.botao-cta {
+    background-color: #bbed2f; /* Cor de fundo verde */
+    color: #000000; /* Cor do texto (preto) */
+    padding: 15px 250px; /* Aumenta o espaçamento interno */
+    border-radius: 100px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    font-size: 22px; /* Aumenta o tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave apenas para a transformação */
+    display: inline-block; /* Garante que o botão se comporte como um bloco em linha */
+    margin-left: 5px; /* Adiciona espaço à esquerda para o botão */
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.botao-cta:hover {
+    background-color: #fff; /* Muda a cor de fundo para branco ao passar o mouse */
+    color: #000000; /* Cor do texto (preto) permanece */
+}
+
+.diferenciais {
+    padding: 50px; /* Espaçamento interno da seção */
+    background-color: #000; /* Cor de fundo da seção */
+    color: #ffffff; /* Cor do texto */
+}
+
+.diferenciais-container {
+    max-width: 1000px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    display: flex; /* Usando Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Espaço entre os itens */
+}
+
+.titulo-diferenciais {
+    background-color: #fa9303; /* Cor de fundo laranja para o box do título */
+    padding: 50px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra ao redor do box */
+    width: 70%; /* Faz o título ocupar a largura total */
+    text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.titulo-diferenciais h2 {
+    color: #000; /* Cor do texto do título */
+    font-size: 2.5em; /* Tamanho do título da seção */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.diferencial-item {
+    background-color: #333; /* Cor de fundo dos itens */
+    border-radius: 16px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno dos itens */
+    margin-bottom: 20px; /* Espaçamento abaixo de cada item */
+    flex: 1 1 calc(30% - 10px); /* Cada item ocupa aproximadamente 30% da largura do container, com espaço entre eles */
+    max-width: calc(30% - 20px); /* Largura máxima para os itens */
+}
+
+/* Ajuste o título e parágrafo dentro de cada diferencial item */
+.diferencial-item h3 {
+    margin: 0; /* Remove a margem padrão */
+    color: #fa9303; /* Cor do título do diferencial */
+}
+
+.diferencial-item p {
+    margin: 10px 0 0; /* Margem acima e abaixo do texto */
+    color: #fff; /* Cor do texto */
+}
+
+.botao-cta-vaga {
+    background-color: #bbed2f; /* Cor de fundo verde */
+    color: #000000; /* Cor do texto (preto) */
+    font-weight: bold; /* Coloca o texto em negrito */
+    padding: 5px; /* Aumenta o espaçamento interno */
+    border-radius: 100px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    width: 100%; /* Faz o botão ocupar 100% da largura do contêiner */
+    max-width: 1000px; /* Define uma largura máxima para o botão */
+    text-align: center; /* Centraliza o texto no botão */
+    margin: 20px auto; /* Margens automáticas para centralizar */
+    display: block; /* Garante que o botão se comporte como um bloco */
+    text-decoration: none;
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.botao-cta-vaga:hover {
+    background-color: #fff; /* Muda a cor de fundo para branco ao passar o mouse */
+    color: #000000; /* Cor do texto (preto) permanece */
+}
+
+.secao-cursos {
+    padding: 50px; /* Espaçamento interno da seção */
+    background-color: #000000; /* Cor de fundo da seção */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.secao-cursos h2 {
+    font-size: 2.5em; /* Tamanho do título da seção */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.paragrafo-pratica {
+    color: #fa9303; /* Cor laranja para o parágrafo */
+    font-size: 1.5em;
+    text-align: center; /* Alinha o texto ao centro */
+    margin: 20px 0; /* Margens superior e inferior */
+}
+
+.cursos-container {
+    display: flex; /* Usando flexbox para alinhar os cursos */
+    flex-wrap: wrap; /* Permite que os cursos quebrem em linhas */
+    justify-content: space-around; /* Espaça os cursos igualmente */
+    margin: 20px auto; /* Adiciona margem superior/inferior e centraliza o container */
+    max-width: 1200px; /* Aumenta a largura máxima do container */
+    padding: 0; /* Remove espaçamento interno */
+}
+
+.curso {
+    background-color: transparent; /* Remove a cor de fundo dos cartões */
+    border: 2px solid #fa9303; /* Adiciona uma borda laranja */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno do cartão */
+    margin: 5px; /* Margem entre os cartões */
+    transition: transform 0.3s; /* Transição suave para o efeito hover */
+    box-shadow: none; /* Remove a sombra ao redor do cartão */
+    flex: 1 1 45%; /* Permite que o cartão ocupe 30% da largura do contêiner */
+    max-width: 600px; /* Largura máxima para os cartões, ajustado */
+    min-width: 200px; /* Largura mínima para garantir que os cartões não fiquem muito pequenos */
+}
+
+.curso h3 {
+    font-size: 1.5em; /* Tamanho do título do curso */
+    margin-bottom: 10px; /* Espaçamento abaixo do título do curso */
+}
+
+.curso p {
+    font-size: 0.9em; /* Tamanho do texto do curso */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto do curso */
+}
+
+.bonus {
+    font-weight: bold;
+}
+
+.preco-antigo {
+    color: red; /* Define a cor vermelha */
+    text-decoration: line-through; /* Adiciona a risca no valor */
+    margin-right: 10px; /* Espaço entre o valor antigo e o novo */
+}
+
+.preco-novo {
+    font-size: 1.2em; /* Aumenta levemente o tamanho do novo valor */
+    font-weight: bold; /* Destaca o novo valor */
+    color: #fff; /* Define uma cor que combine com o estilo do card */
+}
+
+.parcela-info {
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Destaca o texto em negrito */
+    margin-top: 20px; /* Adiciona espaço entre o texto e os cards */
+    color: #fa9303;
+}
+
+.botao-curso {
+    background-color: #fa9303; /* Cor de fundo laranja */
+    color: #fff; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 100px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    width: 100%; /* Faz o botão ocupar 100% da largura do container */
+    text-align: center; /* Centraliza o texto no botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    text-decoration: none;
+}
+
+.botao-curso:hover {
+    background-color: white; /* Muda a cor de fundo ao passar o mouse */
+    color: #000000; /* Muda a cor do texto ao passar o mouse */
+}
+
+
+.secao-galeria {
+    padding: 50px;
+    background-color: #000000;
+}
+
+.grid-galeria {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.item-galeria {
+    min-width: 300px; /* Ajustar conforme necessário */
+    max-width: 300px; /* Ajustar conforme necessário */
+    margin-right: 10px;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: auto;
+    max-height: 350px; /* Ajustar conforme necessário */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.secao-depoimentos {
+    border-top: 2px solid #fff; /* Adiciona uma linha branca acima do texto do rodapé */
+    background-color: #000; /* Fundo da seção */
+    color: #fff; /* Cor do texto */
+    padding: 40px 20px; /* Aumentando o padding para dar mais espaço ao conteúdo */
+    position: relative; /* Para posicionar os botões corretamente */
+}
+
+.titulo-depoimentos {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Aumentando o tamanho da fonte do título */
+}
+
+.depoimentos-container {
+    width: 100%; /* Largura do contêiner */
+    max-width: 1200px; /* Limitar a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+.depoimentos-wrapper {
+    display: flex; /* Usando Flexbox para alinhamento */
+    transition: transform 0.5s ease; /* Transição suave ao mudar os depoimentos */
+}
+
+.depoimento {
+    min-width: 30%; /* Cada depoimento ocupa 30% do contêiner */
+    max-width: 400px; /* Limitar a largura máxima para evitar que fique muito largo */
+    box-sizing: border-box; /* Inclui padding e margin na largura total */
+    background-color: #333; /* Cor de fundo do depoimento */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Padding interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    margin: 0 10px; /* Espaçamento entre os depoimentos */
+    flex-shrink: 0; /* Impede que o tamanho do depoimento diminua */
+}
+.depoimento-icon {
+    display: flex; /* Usando flex para alinhar o ícone e o texto */
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+.depoimento-icon img {
+    width: 40px; /* Ajuste o tamanho do ícone */
+    height: 40px; /* Ajuste o tamanho do ícone */
+    margin-right: 10px; /* Espaçamento à direita do ícone */
+}
+
+/* Estilo para o texto dos depoimentos */
+.depoimento p {
+    font-size: 1.2rem; /* Aumenta o tamanho do texto */
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+}
+
+/* Estilo para o autor do depoimento */
+.depoimento footer {
+    text-align: right; /* Alinhar o autor à direita */
+    font-weight: bold; /* Destacar o autor */
+    font-size: 1rem; /* Ajusta o tamanho da fonte do autor */
+    color: orange; /* Cor do texto do autor */
+}
+
+/* Estilos para os botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 200, 0, 0.8); /* Mudança de cor ao passar o mouse */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+.video-container {
+    display: flex; /* Centraliza o vídeo */
+    justify-content: center; /* Centraliza o vídeo horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaço acima do vídeo */
+    border-bottom: 2px solid #fff; /* Adiciona uma linha branca acima do texto do rodapé */
+}
+
+.video-container iframe {
+    width: 100%; /* Faz o vídeo ocupar 100% da largura do contêiner */
+    max-width: 937px; /* Define uma largura máxima para o vídeo baseada na largura da imagem */
+    height: 500px; /* Ajuste a altura conforme necessário */
+    border: none; /* Remove bordas padrão */
+    
+}
+
+
+.secao-duvidas {
+    padding: 40px; /* Espaçamento interno da seção de dúvidas */
+    color: #fff; /* Cor do texto */
+    margin: 0px auto; /* Centraliza as seções */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para destacar as seções */
+    background-color: #000000; /* Cor de fundo para a seção de dúvidas */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.secao-duvidas h2,
+.secao-informacoes-contato h2 {
+    text-align: center; /* Centraliza os títulos */
+    margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+}
+
+form {
+    display: flex; /* Flexbox para organizar os elementos do formulário */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+input {
+    padding: 10px; /* Espaçamento interno dos campos de entrada */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #fff; /* Cor de fundo dos campos de entrada */
+    color: #333; /* Cor do texto dos campos de entrada */
+    font-size: 1em; /* Tamanho da fonte */
+}
+
+input:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); /* Sombra de destaque ao focar */
+}
+
+button {
+    padding: 10px; /* Espaçamento interno do botão */
+    background-color: #fa9303; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-size: 1em; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    margin-top: 20px; /* Adiciona espaço acima do botão */
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-color: #d88600; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+.secao-informacoes-contato {
+    padding: 40px; /* Espaçamento interno da seção */
+    color: #fff; /* Cor do texto */
+    margin: 0 auto; /* Centraliza a seção */
+    background-color: #000; /* Cor de fundo preto para a seção de informações */
+    display: flex; /* Usar flexbox para layout */
+    flex-direction: column; /* Alinhar elementos em coluna */
+}
+
+.informacoes-contato h3 {
+    font-size: 2em; /* Tamanho do título maior */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; /* Centraliza o título */
+    color: #ff9900; /* Cor laranja para destacar o título */
+}
+
+.contato-container {
+    display: flex; /* Flexbox para organizar o mapa e as informações de contato */
+    justify-content: space-between; /* Espaçar os itens igualmente */
+    margin-bottom: 20px; /* Espaçamento abaixo do contêiner */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.mapa {
+    flex: 1; /* O mapa ocupará parte do espaço */
+    margin-right: 20px; /* Espaçamento à direita do mapa */
+    margin-left: 20px;
+    min-width: 300px; /* Largura mínima do mapa */
+}
+
+.contato-info {
+    flex: 1; /* As informações de contato ocuparão parte do espaço */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    padding: 20px; /* Adiciona espaço interno */
+}
+
+.info-container {
+    background-color: #222; /* Cor de fundo cinza */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-top: 150px; /* Espaçamento acima do container */
+}
+
+.contato-info strong {
+    font-weight: bold; /* Deixa em negrito */
+    color: #ff9900; /* Cor laranja para os rótulos */
+}
+
+.contato-info p {
+    margin: 10px 0; /* Maior espaçamento entre os parágrafos */
+    line-height: 1.5; /* Aumenta a altura da linha para facilitar a leitura */
+}
+
+.informacoes-contato iframe {
+    width: 100%; /* Largura total do mapa */
+    height: 500px; /* Aumenta a altura do mapa */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra ao redor do mapa */
+}
+
+.redes-sociais {
+    margin-top: 100px; /* Espaçamento acima da seção de redes sociais */
+}
+
+.redes-sociais h3 {
+    margin: 20px 0 10px; /* Espaçamento acima e abaixo do título */
+    font-weight: normal; /* Remove o negrito do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.icones-sociais {
+    display: flex; /* Usa flexbox para alinhar os ícones */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    margin-top: 10px; /* Espaçamento acima dos ícones */
+}
+
+.icones-sociais a {
+    margin: 0 15px; /* Espaçamento entre os ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    color: #fff; /* Cor dos ícones */
+    transition: transform 0.2s, color 0.2s; /* Transição suave para o efeito de aumento e cor */
+}
+
+.icones-sociais a:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+    color: #ff9900; /* Muda a cor ao passar o mouse */
+}
+
+
+.rodape-site {
+    text-align: left; /* Centraliza o texto no rodapé */
+    padding: 10px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto */
+    border-top: 2px solid #fff; /* Adiciona uma linha branca acima do texto do rodapé */
+    margin-top: 10px; /* Espaçamento acima do rodapé, opcional */
+}
+
+.whatsapp-icon {
+    position: fixed; /* Fixa o ícone na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    width: 60px; /* Largura do ícone */
+    transition: transform 0.2s; /* Transição suave para o efeito de aumento */
+}
+
+.whatsapp-icon img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .navegacao-principal {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        height: auto; /* Ajusta a altura da barra de navegação */
+    }
+
+    .navegacao-principal .logo {
+        margin: 10px auto; /* Centraliza o logo */
+        height: 100px; /* Ajusta a altura do logo */
+    }
+
+    .navegacao-principal ul {
+        flex-direction: column; /* Alinha os itens da lista verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .navegacao-principal li {
+        margin: 10px 0; /* Margem vertical entre os itens */
+    }
+
+    .conteudo {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        padding: 20px; /* Ajusta o espaçamento interno */
+    }
+
+    .imagem-direita {
+        position: relative; /* Ajusta a posição da imagem */
+        width: 100%; /* Ajusta a largura para 100% */
+        height: auto; /* Altura automática para manter a proporção */
+        top: 0; /* Redefine o topo para 0 */
+        right: 0; /* Redefine a posição à direita */
+    }
+
+    .cabecalho-site {
+        max-width: 100%; /* Largura total para o cabeçalho */
+        padding: 10px; /* Ajusta o espaçamento interno */
+    }
+
+    .botao-cta, .botao-cta-vaga {
+        padding: 10px 50px; /* Ajusta o padding dos botões */
+    }
+
+    .cursos-container {
+        flex-direction: column; /* Coloca os cursos em coluna */
+        align-items: center; /* Centraliza os cursos */
+    }
+
+    .curso {
+        width: 90%; /* Ajusta a largura dos cartões de curso */
+        max-width: none; /* Remove a largura máxima */
+        margin: 10px 0; /* Espaço entre os cartões */
+    }
+
+    .secao-depoimentos {
+        padding: 40px 20px; /* Ajusta o espaçamento interno da seção */
+    }
+
+    .depoimentos-container {
+        height: auto; /* Ajusta a altura da seção */
+        flex-direction: column; /* Alinha os depoimentos em coluna */
+    }
+
+    .secao-duvidas, .secao-informacoes-contato {
+        padding: 20px; /* Ajusta o padding das seções */
+    }
+
+    .whatsapp-icon {
+        width: 50px; /* Ajusta a largura do ícone do WhatsApp */
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+    .navegacao-principal {
+        padding: 5px; /* Reduz o padding na barra de navegação */
+    }
+
+    .navegacao-principal .botao-contato {
+        padding: 8px 12px; /* Ajusta o padding do botão */
+        margin-bottom: 10px; /* Ajusta a margem inferior */
+    }
+
+    .cabecalho-site h1 {
+        font-size: 2.5em; /* Ajusta o tamanho do título */
+    }
+
+    .paragrafo-pratica {
+        font-size: 1.2em; /* Reduz o tamanho da fonte */
+    }
+
+    .botao-curso {
+        padding: 10px; /* Ajusta o padding do botão */
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+    }
+}
